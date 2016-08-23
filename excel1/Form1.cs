@@ -323,7 +323,7 @@ namespace excel1
             stampPlaceBox.Text = nrow[count++].ToString();
             accountBox.Text = nrow[count++].ToString() ;
             string[] str = nrow[count].ToString().Split(new string[] { "\r\n" }, 2, StringSplitOptions.RemoveEmptyEntries);
-            paper1Box.Text = str[0];
+            if(str.Length != 0)paper1Box.Text = str[0];
             if(str.Length > 1)paper2Box.Text =str[1] ;
             
         }
